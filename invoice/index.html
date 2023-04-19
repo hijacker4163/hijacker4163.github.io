@@ -1,20 +1,20 @@
 <!DOCTYPE HTML>
 
-<script src="../lib/js/jquery.1.9.1.js"></script>
+<script src="assets/js/jquery.1.9.1.js"></script>
 <script type="text/javascript">
 	function Check(){
 		var inputValue = $("#txtInvoviceNo").val();
 		if (inputValue.length>2) {
 			console.log(inputValue);
-			$.get("invoiceCheck.php?num="+inputValue, function(data,status) {
-				if(status=="success") {
-					const obj = JSON.parse(data);
-					$("#winning").text(obj[0].result);
-					$("#txtInvoviceNo").val('');
-				} else {
-					alert("數據：" + data + "\n狀態：" + status);
-				}
-			});
+// 			$.get("invoiceCheck.php?num="+inputValue, function(data,status) {
+// 				if(status=="success") {
+// 					const obj = JSON.parse(data);
+// 					$("#winning").text(obj[0].result);
+// 					$("#txtInvoviceNo").val('');
+// 				} else {
+// 					alert("數據：" + data + "\n狀態：" + status);
+// 				}
+// 			});
 		}
 	}
 </script>
