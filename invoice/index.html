@@ -6,7 +6,7 @@
 		var inputValue = $("#txtInvoviceNo").val();
 		if (inputValue.length>2) {
 			console.log(inputValue);
-			$.get("https://x8ki-letl-twmt.n7.xano.io/api:_OihxR3N/invoiceCheck?num?num="+inputValue, function(data,status) {
+			$.get("https://x8ki-letl-twmt.n7.xano.io/api:_OihxR3N/invoiceCheck?num="+inputValue, function(data,status) {
 				console.log(status);
 				console.log(data);
 				if(status=="success") {
