@@ -6,15 +6,15 @@
 		var inputValue = $("#txtInvoviceNo").val();
 		if (inputValue.length>2) {
 			console.log(inputValue);
-// 			$.get("invoiceCheck.php?num="+inputValue, function(data,status) {
-// 				if(status=="success") {
+			$.get("https://x8ki-letl-twmt.n7.xano.io/api:_OihxR3N/invoiceCheck?num?num="+inputValue, function(data,status) {
+				if(status=="success") {
 // 					const obj = JSON.parse(data);
-// 					$("#winning").text(obj[0].result);
-// 					$("#txtInvoviceNo").val('');
-// 				} else {
-// 					alert("數據：" + data + "\n狀態：" + status);
-// 				}
-// 			});
+					$("#winning").text(data);
+					$("#txtInvoviceNo").val('');
+				} else {
+					alert("數據：" + data + "\n狀態：" + status);
+				}
+			});
 		}
 	}
 </script>
